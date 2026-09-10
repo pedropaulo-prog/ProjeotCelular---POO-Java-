@@ -5,13 +5,17 @@ public class Celular {
     private int bateria;
     private int volume;
 
-    public Celular(String marca, String modelo, int bateria, int volume) {
+    public Celular(String marca, String modelo) {
+        this.setMarca(marca);
+        this.setModelo(modelo);
+    }
 
+    public void setMarca(String marca) {
         this.marca = marca;
-        this.modelo = modelo;
-        this.bateria = bateria;
-        this.volume = volume;
+    }
 
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
     public void aumentarVolume(int quantidade) {
@@ -41,5 +45,4 @@ public class Celular {
         return bateria;
 
     }
-
 }

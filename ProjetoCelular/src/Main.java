@@ -4,10 +4,7 @@ public class Main {
 
         Celular celular = new Celular(
                 "Apple",
-                "iPhone 17 Pro Max",
-                50,
-                40
-        );
+                "iPhone 17 Pro Max");
 
         // Teste do volume
         System.out.println("Volume inicial: " + celular.getVolume());
@@ -19,7 +16,6 @@ public class Main {
         celular.aumentarVolume(50);
 
         System.out.println("Volume após tentativa inválida: " + celular.getVolume());
-
 
         // Teste da bateria
         System.out.println("Bateria inicial: " + celular.getBateria());
@@ -33,5 +29,4 @@ public class Main {
         System.out.println("Bateria após tentativa inválida: " + celular.getBateria());
 
     }
-
 }
