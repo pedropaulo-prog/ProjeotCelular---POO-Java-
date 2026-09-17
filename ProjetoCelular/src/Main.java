@@ -2,9 +2,12 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Bateria bateria = new Bateria(0);
+
         Celular celular = new Celular(
                 "Apple",
-                "iPhone 17 Pro Max");
+                "iPhone 17 Pro Max",
+                bateria);
 
         // Teste do volume
         System.out.println("Volume inicial: " + celular.getVolume());
@@ -27,6 +30,8 @@ public class Main {
         celular.carregarBateria(50);
 
         System.out.println("Bateria após tentativa inválida: " + celular.getBateria());
+
+        System.out.println("Bateria do objeto associado: " + bateria.getPorcentagem() + "%");
 
     }
 }

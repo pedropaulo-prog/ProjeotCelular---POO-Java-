@@ -2,12 +2,13 @@ public class Celular {
 
     private String marca;
     private String modelo;
-    private int bateria;
+    private Bateria bateria;
     private int volume;
 
-    public Celular(String marca, String modelo) {
+    public Celular(String marca, String modelo, Bateria bateria) {
         this.setMarca(marca);
         this.setModelo(modelo);
+        this.bateria = bateria;
     }
 
     public void setMarca(String marca) {
@@ -27,11 +28,7 @@ public class Celular {
     }
 
     public void carregarBateria(int quantidade) {
-
-        if (quantidade > 0 && bateria + quantidade <= 100) {
-            bateria = bateria + quantidade;
-        }
-
+        bateria.carregar(quantidade);
     }
 
     public int getVolume() {
@@ -42,7 +39,7 @@ public class Celular {
 
     public int getBateria() {
 
-        return bateria;
+        return bateria.getPorcentagem();
 
     }
 }
